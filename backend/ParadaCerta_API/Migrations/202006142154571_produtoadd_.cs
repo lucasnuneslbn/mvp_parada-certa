@@ -1,0 +1,29 @@
+﻿namespace ParadaCerta_API.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class produtoadd_ : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Produtos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Id_Parceiro = c.Int(nullable: false),
+                        Descricao = c.String(),
+                        Vlr_Reais = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Vlr_Pontos = c.Decimal(nullable: false, precision: 18, scale: 2),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Produtos");
+        }
+    }
+}
