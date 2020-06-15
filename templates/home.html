@@ -1,0 +1,144 @@
+<style>
+#map {
+	height:400px;	
+}
+
+.popContent {
+	position:absolute;
+	height:300px;
+	padding:20px;
+	top:0;
+	left:5%;
+	right:5%;
+	background-color:white;
+	border-radius: 2%;
+}
+
+.popContent .icFechar{
+	    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-top: 2px;
+}
+.logoParceiro {
+	border: 2px solid white;
+	 background-color: grey;
+	 background-repeat: no-repeat !important;
+	 background-position: center !important;
+	 background-size: cover !important;
+	 height: 60px;
+	 width: 60px;	
+	 border-radius: 50%;
+	 background-image: url(https://pbs.twimg.com/profile_images/1264697111947460608/bMwykUJM_400x400.jpg);
+}
+
+
+</style>
+
+<ion-view view-title="Home">
+<!-- Tabs -->
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" href="#/app/home">
+        <i class="icon ion-ios7-location"></i>
+        Parceiros
+      </a>
+      
+      <a class="tab-item" href="#/app/premios">
+        <i class="icon ion-ios7-pricetags-outline"></i>
+        Resgate de Prêmios 
+      </a>
+      
+      <a class="tab-item" href="#/app/saude">
+        <i class="icon ion-ios7-pulse-strong"></i>
+        Saúde
+      </a>
+    </div>
+</div>
+
+<!-- Content -->
+<ion-content style="margin-top:48px" >
+	<div style="width:100%; ">
+    	<img src="http://hospitalcubatao.com.br/wp-content/uploads/2020/02/21-WEB-BANNER-FEV-CORONA-VIRUS-HC-1500X530PX-300x86.png" width="100%"  />
+    </div>
+    <div id="map"></div>
+    
+    <!-- Detalhes do parceiro -->
+    <div class="popContent" style="display:none">
+        <div class="row">
+      		<div class="col-30">
+            	<div class="logoParceiro"></div>
+            </div>
+            <div class="col" style="margin-left:15px;">
+            	<div style="float:left">
+                    <b>Posto Ipiranga</b><br />
+                    <small>à 5km de distância</small>
+                </div>
+                <div style="float:left">
+                    <img src="https://i.pinimg.com/originals/d6/09/0d/d6090d4014c218ed2e44016fbef2adfc.jpg" style="float:left; margin-left:20px;" height="25" />
+                    <img src="https://cdn.icon-icons.com/icons2/1674/PNG/512/phonecall_110970.png" style="float:left; margin-left:20px;"  height="25" />
+                    <img src="https://img2.gratispng.com/20180810/bro/kisspng-clip-art-google-maps-computer-icons-openclipart-perkotek-parmak-izi-okuma-yz-tanma-turnike-sis-5b6d60e35344c8.8711290015338948833411.jpg" style="float:left; margin-left:20px;"  height="25" />
+                </div>
+                <div style="float:left">
+                    <div class="icon ion-ios7-star" style="float:left" ></div>
+                    <div class="icon ion-ios7-star"  style="float:left"></div>
+                    <div class="icon ion-ios7-star"  style="float:left"></div>
+                    <small> (Nota 3)</small>
+                 </div>
+                 
+                 <div class="icFechar" onclick="$(this).closest('.popContent').css('display','none')"><strong>x</strong></div>
+            </div>
+        </div>
+        <div class="row">
+      		<div class="col">
+        		<b>Avaliação da estrutura</b>
+            </div>
+        </div>
+        <div class="row">
+      		<div class="col-60">
+            	Área de descanso
+            </div>
+           <div class="col text-left">
+            <div class="icon ion-ios7-star" style="float:left" ></div>
+            <div class="icon ion-ios7-star"  style="float:left"></div>
+            <div class="icon ion-ios7-star"  style="float:left"></div>
+            <div class="icon ion-ios7-star"  style="float:left"></div>
+            <div class="icon ion-ios7-star"  style="float:left"></div>
+          </div>
+        </div>
+        <div class="row">
+      		<div class="col-60">
+            	Banheiros
+            </div>
+            <div class="col text-left">
+                <div class="icon ion-ios7-star" style="float:left" ></div>
+                <div class="icon ion-ios7-star"  style="float:left"></div>
+                <div class="icon ion-ios7-star"  style="float:left"></div>
+            </div>
+        </div>
+        <div class="row">
+      		<div class="col-60">
+            	Combustível
+            </div>
+            <div class="col text-left">
+                <div class="icon ion-ios7-star" style="float:left" ></div>
+            </div>
+        </div>
+        <div class="row">
+      		<div class="col-60">
+            	Alimentação
+            </div>
+            <div class="col text-left">
+                <div class="icon ion-ios7-star" style="float:left" ></div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+</ion-view>
